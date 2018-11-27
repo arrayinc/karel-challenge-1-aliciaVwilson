@@ -25,3 +25,32 @@ shown in the outline.
 
 import "turns";
 
+function RetrieveNewsPaper(){
+	moveToPaper();
+	pickUpPaper();
+	returnToStart();
+}
+
+function moveToPaper(){
+	while(frontIsClear()){
+		move();
+	}
+	turnRight();
+	move();
+	turnLeft();
+	move();
+}
+
+function pickUpPaper(){
+	pickBeeper();
+	turnAround();
+}
+
+function returnToStart(){
+	while(frontIsClear()){
+		move();
+	}
+	turnRight();
+	move();
+	turnRight();
+}
